@@ -11,10 +11,7 @@
  */
 
 function CreateArrayOfVal(fill, length) {
-    var arr = [];
-    for (var i=0; i<length; i++) {
-        arr.push(fill);
-    }
+    var arr = new Array(length).fill(fill);
     return arr;
 }
 
@@ -26,6 +23,7 @@ function PerformArrayDivision(numArray, denArray) {
 }
 
 function SolveProblem(arr) {
+    AddPolyfills();
     if (arr === null || arr.length < 2)
         throw new Error("Array not valid for problem");
 
