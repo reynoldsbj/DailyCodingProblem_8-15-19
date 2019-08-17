@@ -1,0 +1,10 @@
+language: node_js
+node_js:
+    - "node"
+script: node_modules/karma/bin/karma start my.conf.js --single-run --browsers Chrome
+services:
+  - xvfb
+before_install:
+    - export DISPLAY=:99.0
+before_script:
+    - npm install

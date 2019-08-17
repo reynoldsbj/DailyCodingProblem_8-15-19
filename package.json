@@ -1,0 +1,22 @@
+{
+  "name": "8-13-19",
+  "version": "1.0.0",
+  "description": "Given a list of numbers and a number k, return whether any two numbers from the list add up to k.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test-watch": "karma start my.conf.js --auto-watch --capture-timeout 60000",
+    "test-help": "karma start --help"
+  },
+  "author": "Brian Reynolds",
+  "license": "ISC",
+  "devDependencies": {
+    "karma": "^4.2.0",
+    "karma-chrome-launcher": "^3.1.0",
+    "karma-coverage": "^1.1.2",
+    "karma-firefox-launcher": "^1.2.0",
+    "karma-ie-launcher": "^1.0.0",
+    "karma-jasmine": "^2.0.1",
+    "karma-jasmine-html-reporter": "^1.4.2"
+  }
+}
