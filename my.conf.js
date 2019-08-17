@@ -15,7 +15,7 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      '*.js',
+      'src/**/*.js',
       'test/**/*Spec.js'
     ],
 
@@ -31,7 +31,7 @@ module.exports = function(config) {
       // source files, that you wanna generate coverage for
       // do not include tests or libraries
       // (these files will be instrumented by Istanbul)
-      'main.js': ['coverage']
+      'src/main.js': ['coverage']
     },
 
 
@@ -42,12 +42,11 @@ module.exports = function(config) {
 
     // optionally, configure the reporter
     coverageReporter: {
-      type : 'html',
-      dir : 'coverage/',
- 
-      // Combines coverage information from multiple browsers into one report rather than outputting a report
-      // for each browser.
-      combineBrowserReports: true
+      reporters: [
+        {type: 'html', subdir: 'html'},
+        {type: 'lcov', subdir: 'lcov'},
+        {type: 'text'}
+      ]
     },
 
     // web server port
