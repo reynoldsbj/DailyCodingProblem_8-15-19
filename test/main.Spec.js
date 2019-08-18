@@ -25,10 +25,10 @@ describe('SolveProblem([3, 2, 0])', function() {
 describe('SolveProblem([1]', function(){
     it('should throw a "Array not valid for problem" exception', function() {
         try{
-            SolveProblem([1]);
+            expect(SolveProblem([1])).toThrowError("Array not valid for problem");
         }
         catch(e) {
-            expect(e.message).toEqual("Array not valid for problem");
+            //Do nothing...
         }
     });
 });
@@ -60,10 +60,10 @@ describe('SolveProblemFollowUp([3, 2, 0])', function() {
 describe('SolveProblemFollowUp([1]', function(){
     it('should throw a "Array not valid for problem" exception', function() {
         try{
-            SolveProblemFollowUp([1]);
+            expect(SolveProblemFollowUp([1])).toThrowError("Array not valid for problem");
         }
         catch(e) {
-            expect(e.message).toEqual("Array not valid for problem");
+            //Do nothing...
         }
     });
 });
